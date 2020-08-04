@@ -1,0 +1,130 @@
+@import 'colors.scss';
+
+#page-landing {
+  width: 100vw;
+  height: 100vh;
+
+  display: grid;
+  place-items: center;
+
+  color: $color-text-in-primary;
+  background: $color-primary;
+
+  &-content {
+    @media (min-width: $desktop-breakpoint) {
+      max-width: $desktop-breakpoint;
+
+      display: grid;
+      grid-template-rows: 350px 1fr;
+      grid-template-columns: 2fr 1fr 1fr;
+      grid-template-areas:
+        'logo hero hero'
+        'buttons buttons total';
+    }
+  }
+}
+
+.logo-container {
+  text-align: center;
+  margin-bottom: 3.2rem;
+  @media (min-width: $desktop-breakpoint) {
+    text-align: left;
+    grid-area: logo;
+    align-self: center;
+    margin: 0;
+  }
+  img {
+    height: 10rem;
+    @media (min-width: $desktop-breakpoint) {
+      height: 100%;
+    }
+  }
+  h2 {
+    @media (min-width: $desktop-breakpoint) {
+      text-align: initial;
+      font-size: 3.6rem;
+    }
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 4.6rem;
+    margin-top: 0.8rem;
+  }
+}
+
+.hero-image {
+  width: 100%;
+  @media (min-width: $desktop-breakpoint) {
+    grid-area: hero;
+    justify-self: end;
+  }
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  margin: 3.2rem 0;
+  grid-area: buttons;
+  @media (min-width: $desktop-breakpoint) {
+    justify-content: flex-start;
+  }
+
+  a {
+    width: 30rem;
+    height: 10.4rem;
+    border-radius: 0.8rem;
+    font: 700 2rem Archivo;
+    @media (min-width: $desktop-breakpoint) {
+      font-size: 2.4rem;
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    color: $color-button-text;
+
+    transition: background-color 0.2s;
+
+    img {
+      width: 4rem;
+      @media (min-width: $desktop-breakpoint) {
+        margin-right: 2.4rem;
+      }
+    }
+
+    &:first-child {
+      margin-right: 1.6rem;
+    }
+
+    &.study {
+      background: $color-primary-lighter;
+      &:hover {
+        background: $color-primary-light;
+      }
+    }
+
+    &.give-classes {
+      background: $color-secundary;
+      &:hover {
+        background: $color-secundary-dark;
+      }
+    }
+  }
+}
+
+.total-connections {
+  font-size: 1.4rem;
+
+  grid-area: total;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (min-width: $desktop-breakpoint) {
+    justify-self: end;
+  }
+
+  img {
+    margin-left: 0.8rem;
+  }
+}

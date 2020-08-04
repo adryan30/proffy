@@ -1,1 +1,46 @@
+@import './colors.scss';
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&family=Poppins&display=swap');
+
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+  font-size: 60%;
+  @media (min-width: 700px) {
+    font-size: 62.5%;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100vh;
+}
+
+body {
+  background-color: $color-background;
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body,
+input,
+button,
+textarea {
+  font: 500 1.6rem Poppins;
+  color: $color-text-base;
+}
+
+.container {
+  width: 90vw;
+  max-width: 700px;
+}
