@@ -31,6 +31,15 @@
     },
     "backend": {
       "tags": []
+    },
+    "interfaces": {
+      "tags": []
+    },
+    "entities": {
+      "tags": []
+    },
+    "shared": {
+      "tags": []
     }
   }
 }

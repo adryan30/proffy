@@ -1,0 +1,25 @@
+{
+  "name": "Adryan Almeida",
+  "avatar": "https://avatars1.githubusercontent.com/u/41494576?s=460&u=ebb6c58439ae87e4abe274813e2a1ede1ec04b78&v=4",
+  "whatsapp": "82996893340",
+  "bio": "Graduando de Ciência da Computação da UFAL - Campus Arapiraca.",
+  "subject": "Matemática",
+  "cost": 80,
+  "schedule": [
+    {
+      "week_day": 1,
+      "from": "08:00",
+      "to": "12:00"
+    },
+    {
+      "week_day": 3,
+      "from": "10:00",
+      "to": "18:00"
+    },
+    {
+      "week_day": 4,
+      "from": "08:00",
+      "to": "12:00"
+    }
+  ]
+}

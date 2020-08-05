@@ -15,7 +15,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@nlw2/interfaces": ["libs/interfaces/src/index.ts"],
+      "@nlw2/entities": ["libs/entities/src/index.ts"],
+      "@nlw2/shared": ["libs/shared/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
