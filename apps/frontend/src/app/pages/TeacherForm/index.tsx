@@ -104,6 +104,7 @@ const TeacherForm: React.FC = () => {
             <Select
               name="subject"
               onChange={(e) => setSubject(e.target.value)}
+              value={subject}
               label="Matéria"
               options={[
                 {
@@ -230,7 +231,7 @@ const TeacherForm: React.FC = () => {
               Importante! <br />
               Preencha todos os dados
             </p>
-            <button type="button">Salvar Cadastro</button>
+            <button type="submit">Salvar Cadastro</button>
           </footer>
         </form>
       </main>

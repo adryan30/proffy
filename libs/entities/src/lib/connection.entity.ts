@@ -1,7 +1,6 @@
 import {
   Entity,
   PrimaryGeneratedColumn,
-  Column,
   ManyToOne,
   CreateDateColumn,
 } from 'typeorm';
@@ -18,6 +17,6 @@ export class Connection {
   })
   user: User;
 
-  @CreateDateColumn({ nullable: false, default: Date.now() })
+  @CreateDateColumn({ nullable: false, default: new Date() })
   created_at: Date;
 }

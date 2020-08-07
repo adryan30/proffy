@@ -1,0 +1,24 @@
+{
+  "functions": {
+    "source": "dist/apps/backend",
+    "predeploy": [
+      "yarn build backend --prod",
+      "node tools/scripts/build-firebase-package.js"
+    ]
+  },
+  "hosting": {
+    "public": "dist/apps/frontend",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "predeploy": ["yarn build frontend --prod"],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/api/**",
+        "function": "api"
+      }
+    ]
+  }
+}

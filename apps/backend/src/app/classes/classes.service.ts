@@ -78,6 +78,7 @@ export class ClassesService {
       },
       relations: ['schedules', 'user'],
     });
+    // this.logger.log(classes);
 
     const filteredDayClasses = classes.filter(function (value) {
       return value.schedules.some(
@@ -86,7 +87,7 @@ export class ClassesService {
     });
 
     const filteredTimeClasses = filteredDayClasses.filter(function (value) {
-      return value.schedules.every((schedule) => {
+      return value.schedules.some((schedule) => {
         return timeInMinutes >= schedule.from && timeInMinutes < schedule.to;
       });
     });

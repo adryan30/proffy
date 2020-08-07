@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  baseURL: '', //! Define production API url before deploy
+  baseURL: 'https://us-central1-proffy-nlw.cloudfunctions.net/api',
 };
