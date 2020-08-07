@@ -3,20 +3,31 @@ import React from 'react';
 import './styles.scss';
 
 import whatsappIcon from '@icons/whatsapp.svg';
+import { api } from 'services/api';
 
 interface TeacherItemProps {
+  id: string;
   name: string;
   subject: string;
   price: string;
+  bio: string;
+  whatsapp: string;
   imageUrl: string;
 }
 
 const TeacherItem: React.FC<TeacherItemProps> = ({
+  id,
   name,
-  imageUrl,
   subject,
   price,
+  bio,
+  whatsapp,
+  imageUrl,
 }) => {
+  const makeConnection = () => {
+    api.post('/connections', { user_id: id });
+  };
+
   return (
     <article className="teacher-item">
       <header>
@@ -27,24 +38,22 @@ const TeacherItem: React.FC<TeacherItemProps> = ({
         </div>
       </header>
 
-      <p>
-        Entusiasta das melhores tecnologias de química avançada.
-        <br />
-        <br />
-        Apaixonado por explodir coisas em laboratório e por mudar a vida das
-        pessoas através de experiências. Mais de 200.000 pessoas já passaram por
-        uma das minhas explosões.
-      </p>
+      <p>{bio}</p>
 
       <footer>
         <p>
           Preço/hora
           <strong>{price}</strong>
         </p>
-        <button type="button">
+        <a
+          href={`https://wa.me/${whatsapp}`}
+          target="_blank"
+          rel="noreferrer"
+          onClick={makeConnection}
+        >
           <img src={whatsappIcon} alt="WhatsApp" />
           Entrar em contato
-        </button>
+        </a>
       </footer>
     </article>
   );
