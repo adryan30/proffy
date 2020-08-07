@@ -1,90 +1,134 @@
-# Nlw2
+# Proffy <!-- omit in toc -->
 
-This project was generated using [Nx](https://nx.dev).
+<div align="center">
 
-<p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
+![Proffy Landing](./assets/landing.svg)
 
-🔎 **Nx is a set of Extensible Dev Tools for Monorepos.**
+## Sua plataforma de estudos online <!-- omit in toc -->
 
-## Adding capabilities to your workspace
+![NLW2 Badge](https://img.shields.io/badge/NLW2-Rocketseat-blueviolet?style=for-the-badge&logo=skyliner&logoColor=white)
+![License Badge](https://img.shields.io/github/license/adryan30/proffy?logo=gnu&style=for-the-badge)
 
-Nx supports many plugins which add capabilities for developing different types of applications and different tools.
+</div>
 
-These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
+---
 
-Below are our core plugins:
+## Tabela de Conteúdos <!-- omit in toc -->
 
-- [React](https://reactjs.org)
-  - `npm install --save-dev @nrwl/react`
-- Web (no framework frontends)
-  - `npm install --save-dev @nrwl/web`
-- [Angular](https://angular.io)
-  - `npm install --save-dev @nrwl/angular`
-- [Nest](https://nestjs.com)
-  - `npm install --save-dev @nrwl/nest`
-- [Express](https://expressjs.com)
-  - `npm install --save-dev @nrwl/express`
-- [Node](https://nodejs.org)
-  - `npm install --save-dev @nrwl/node`
+- [Sobre o projeto](#sobre-o-projeto)
+- [Tecnologias](#tecnologias)
+- [Rodando o projeto](#rodando-o-projeto)
+  - [Pré-requisitos](#pré-requisitos)
+  - [Instalação](#instalação)
+- [Contribuindo](#contribuindo)
+- [Licença](#licença)
+- [Contato](#contato)
+- [Reconhecimentos](#reconhecimentos)
 
-There are also many [community plugins](https://nx.dev/nx-community) you could add.
+<!-- ABOUT THE PROJECT -->
 
-## Generate an application
+## Sobre o projeto
 
-Run `nx g @nrwl/react:app my-app` to generate an application.
+[![Proffy][product-screenshot]]()
 
-> You can use any of the plugins above to generate applications as well.
+Durante a pandemia do Covid-19, acabou surgindo uma barreira entre os professores e seus aulos. Esse projeto tem como objetivo quebrar esse distanciomento e conectar educadores com aqueles que necessitam.
 
-When using Nx, you can create multiple applications and libraries in the same workspace.
+Os passos para utilizar são simples:
 
-## Generate a library
+- Professores se cadastram pelo botão `Dar aulas`, envando um formulário com seus horários e matéria.
+- Alunos procuram professores pelo botão `Estudar`, filtrando pela matéria e quando precisam de aulas.
+- Os dois se conectam através da rede `WhatsApp`, onde podem combinar plataforma de vídeo e pagamento.
 
-Run `nx g @nrwl/react:lib my-lib` to generate a library.
+Espero que gostem! 😄
 
-> You can also use any of the plugins above to generate libraries as well.
+## Tecnologias
 
-Libraries are sharable across libraries and applications. They can be imported from `@nlw2/mylib`.
+Tecnologias que me ajudaram a trazer esse projeto à realidade:
 
-## Development server
+- [NestJS](https://nestjs.com/)
+- [React](https://pt-br.reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [NX Monorepo](https://nx.dev/react)
 
-Run `nx serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+<!-- GETTING STARTED -->
 
-## Code scaffolding
+## Rodando o projeto
 
-Run `nx g @nrwl/react:component my-component --project=my-app` to generate a new component.
+### Pré-requisitos
 
-## Build
+É necessario ter instalado:
 
-Run `nx build my-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+- [Node.js](https://nodejs.org/)
+- NPM ([Yarn v1](https://classic.yarnpkg.com/lang/en/) recomendado)
+- [Git](https://git-scm.com/)
 
-## Running unit tests
+### Instalação
 
-Run `nx test my-app` to execute the unit tests via [Jest](https://jestjs.io).
+1. Clone o repositório
 
-Run `nx affected:test` to execute the unit tests affected by a change.
+```sh
+git clone https://github.com/adryan30/proffy.git
+```
 
-## Running end-to-end tests
+2. Instale os pacotes NPM
 
-Run `ng e2e my-app` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
+```sh
+npm install
+```
 
-Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
+3. Execute o comando parar abrir o **_app_** desejado.
 
-## Understand your workspace
+```sh
+# Para executar o frontend
+nx serve frontend
 
-Run `nx dep-graph` to see a diagram of the dependencies of your projects.
+# Para executar o backend
+nx serve backend
 
-## Further help
+# Para executar a aplicação completa
+nx run-many --target=serve --all=true --parallel=true
 
-Visit the [Nx Documentation](https://nx.dev) to learn more.
+```
 
-## ☁ Nx Cloud
+<!-- CONTRIBUTING -->
 
-### Computation Memoization in the Cloud
+## Contribuindo
 
-<p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-cloud-card.png"></p>
+Contruibições para esse projeto são altamente encorajadas, apesar de seu estado **finalizado**.
 
-Nx Cloud pairs with Nx in order to enable you to build and test code more rapidly, by up to 10 times. Even teams that are new to Nx can connect to Nx Cloud and start saving time instantly.
+1. Forke o repositório
+2. Crie uma Branch pra sua Feature (`git checkout -b feature/AlgumaFeature`)
+3. Commite sua mudanças (`git commit -m 'Adicona SuaFeature'`)
+4. Dê push para sua Branch (`git push origin feature/SuaFeature`)
+5. Abra um Pull Request
 
-Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
+<!-- LICENSE -->
 
-Visit [Nx Cloud](https://nx.app/) to learn more.
+## Licença
+
+Distribuido sobre a licença `GPLv3`. Veja `LICENSE.md` para mais informações.
+
+<!-- CONTACT -->
+
+## Contato
+
+**Adryan Almeida**
+
+[![Gmail][gmail-shield]][gmail-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
+Link do projeto: [https://github.com/adryan30/proffy](https://github.com/adryan30/proffy)
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## Reconhecimentos
+
+- Todos os direitos sobre o design gráfico e de API são atribuidos ao pessoal da [Rocketseat](https://github.com/Rocketseat).
+
+<!-- MARKDOWN LINKS & IMAGES -->
+
+[gmail-shield]: https://img.shields.io/badge/email-red?logo=gmail&style=for-the-badge&colorB=555
+[gmail-url]: mailto:adryan.software@gmail.com
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/adryanalmeida
+[product-screenshot]: ./assets/landing.png

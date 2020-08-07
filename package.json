@@ -1,7 +1,7 @@
 {
-  "name": "nlw2",
-  "version": "0.0.0",
-  "license": "MIT",
+  "name": "proffy",
+  "version": "1.0.0",
+  "license": "GPLv3",
   "scripts": {
     "nx": "nx",
     "start": "nx serve",
